@@ -1,13 +1,20 @@
-function mainMap(zipData) {
+function mainMap() {
     const displayMap = L.map('map').setView([39.0458, -76.6413], 10);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(displayMap);
-L.geoJson(zipData).addTo(displayMap);
+return displayMap;
     
 }
 
+function addgeoJSON(geoJSONObject, mainMAP) {
+    console.log('Adding GEOJSON to Map');
+    L.geoJson(geoJSONObject).addTo(mainMAP);
+}
+
+
+const mapObject = mainMap();
 
 async function mainPage() {
     const loadZIP = document.querySelector('#DataLoadZIP');
@@ -18,7 +25,7 @@ async function mainPage() {
         const zipData = await fetch('./Maryland_Political_Boundaries_-_ZIP_Codes_-_5_Digit.geojson');
         const zipDataJSON = await zipData.json();
         console.log(zipDataJSON)
-        mainMap(zipDataJSON);
+        addgeoJSON(zipDataJSON, mapObject)
     });
 
     loadCarRegis.addEventListener('click', async(SubmitEvent) => {
