@@ -1,4 +1,59 @@
 #map {
-    height: 400px; 
-    width: 400px;
+    height: 500px; 
+    width: 600px;
 }
+
+.footer {
+    flex-shrink: 0;
+    padding: 1rem;
+    background-color: #048f3e;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px dashed;
+  }
+
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    flex: 1;
+  }
+
+.headerA {
+  background-color: rgb(19, 150, 84);
+}
+
+  
+.container {
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+  }
+
+.hidden {
+    display: none;
+}
+
+.box {
+    background-color: rgba(239, 239, 239, 0.40);
+    border: 2px dashed;
+    border-radius: 4px;
+  
+    width: fit-content;
+    height:fit-content;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+  
+  .mapAttribute {
+    background-color: #38cc82;
+    flex: 0 1 auto;
+  }
+  
+  .filterAttribute {
+    background-color: aquamarine;
+  }
+  
