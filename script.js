@@ -59,6 +59,7 @@ const mapObject = mainMap();
 const mapLayer = L.geoJSON().addTo(mapObject)
 let evobject = [];
 
+
 var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
@@ -76,6 +77,8 @@ legend.onAdd = function (map) {
 
     return div;
 };
+
+
 
 async function mainPage() {
     const loadZIP = document.querySelector('#DataLoadZIP');
