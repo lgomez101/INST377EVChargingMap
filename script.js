@@ -72,7 +72,7 @@ async function mainPage() {
         }).addTo(mapLayer);
 
         L.geoJSON(zipDataJSON, {style: style}).addTo(mapLayer);
-        
+        loadZIP.classList.add('hidden')
         
     });
 
